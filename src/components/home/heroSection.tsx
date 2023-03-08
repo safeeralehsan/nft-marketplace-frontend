@@ -1,3 +1,5 @@
+import HeroCarousel from "./heroCarousel"
+
 export default function HeroSection() {
 
     const liveStats = [
@@ -18,7 +20,7 @@ export default function HeroSection() {
     return (
         <>
             <div className="flex justify-center">
-                <div className="py-16 max-w-[90%] h-fit w-full grid md:grid-cols-7 grid-cols-1">
+                <div className="py-16 lg:max-w-[70%] max-w-[80%] h-fit w-full grid md:grid-cols-7 grid-cols-1">
                     <div className="md:col-span-4 col-span-1 flex flex-col justify-center">
                         <span className="text-5xl font-IntegralCF">
                             DISCOVER, AND COLLECT DIGITAL ART NFTS
@@ -26,7 +28,7 @@ export default function HeroSection() {
                         <span className="my-8 text-xl text-gray-700 font-DMSans w-3/5">
                             Digital marketplace for crypto collectibles and non-fungible tokens (NFTSs). Buy, Sell, and discover exclusive digital assets.
                         </span>
-                        <button className='py-3 px-8 mx-2 w-fit bg-purple-900 border-2 border-purple-900 text-white font-DMSans rounded-full font-bold text-xl tracking-wider hover:bg-purple-800 transition-colors duration-300'>
+                        <button className='py-3 px-8 mx-2 w-fit bg-purple-900 border-2 border-purple-900 text-white font-DMSans rounded-full font-bold text-xl tracking-wider hover:bg-white hover:text-purple-900 transition-colors duration-300'>
                             Explore Now
                         </button>
                         <span className="w-full flex justify-start mt-8">
@@ -42,7 +44,9 @@ export default function HeroSection() {
                             })}
                         </span>
                     </div>
-                    <div className="md:col-span-3 col-span-1"></div>
+                    <div className="md:col-span-3 col-span-1 flex justify-center items-center">
+                        <HeroCarousel />
+                    </div>
                 </div>
             </div>
         </>
