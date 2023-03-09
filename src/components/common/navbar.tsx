@@ -43,27 +43,28 @@ export default function Navbar({ openMenuDrawer, setOpenMenuDrawer }: Props) {
                 </span>
             </div>
 
-            <div
-                className={`h-screen w-screen absolute z-40 top-0 right-0 bg-transparent ${openMenuDrawer ? '' : 'hidden'}`}
-                onClick={() => setOpenMenuDrawer(false)}
-            />
             {/* Drawer Menu */}
-            <div className={`xl:hidden right-0 top-0 z-[49] w-[75vw] md:w-[50vw] h-screen bg-purple-900 flex flex-col justify-center overflow-hidden
+            <div className={`absolute top-0 right-0 w-0 transition-all duration-1000 ${openMenuDrawer ? '' : 'overflow-hidden'}`}>
+
+                <div className={`xl:hidden right-0 top-0 z-[49] w-[75vw] md:w-[50vw] h-screen bg-purple-900 flex flex-col justify-center overflow-hidden
                     transition-transform duration-500 ${openMenuDrawer ? 'fixed' : 'absolute translate-x-[100%]'}`}
-            >
-                <span className='mx-auto my-5 w-9/12 flex flex-row items-center justify-around border-2 px-3 py-2 rounded-full focus-within:border-purple-700 transition-colors duration-300'>
-                    <input
-                        placeholder="Search"
-                        value={searchInput}
-                        onChange={(e) => setSearchInput(e.target.value)}
-                        className="font-DMSans focus:outline-none bg-purple-900 text-white" />
-                    <CiSearch className='text-2xl text-white' />
-                </span>
-                <p className='cursor-pointer text-white text-center bg-purple-600 hover:text-purple-900 hover:bg-white font-DMSans max-md:text-2xl text-3xl font-bold my-2 transition-colors duration-200'>Upload</p>
-                <p className='cursor-pointer text-white text-center bg-purple-600 hover:text-purple-900 hover:bg-white font-DMSans max-md:text-2xl text-3xl font-bold my-2 transition-colors duration-200'>Connect Wallet</p>
-                <p className='cursor-pointer text-white hover:text-purple-900 hover:bg-white font-DMSans max-md:text-xl text-2xl font-bold my-1 pl-10 transition-colors duration-200'>Marketplace</p>
-                <p className='cursor-pointer text-white hover:text-purple-900 hover:bg-white font-DMSans max-md:text-xl text-2xl font-bold my-1 pl-10 transition-colors duration-200'>Resource</p>
-                <p className='cursor-pointer text-white hover:text-purple-900 hover:bg-white font-DMSans max-md:text-xl text-2xl font-bold my-1 pl-10 transition-colors duration-200'>About</p>
+                >
+                    <span className='mx-auto my-5 w-9/12 flex flex-row items-center justify-around border-2 px-3 py-2 rounded-full focus-within:border-purple-700 transition-colors duration-300'>
+                        <input
+                            placeholder="Search"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
+                            className="font-DMSans focus:outline-none bg-purple-900 text-white" />
+                        <CiSearch className='text-2xl text-white' />
+                    </span>
+                    <p className='cursor-pointer text-white text-center bg-purple-600 hover:text-purple-900 hover:bg-white font-DMSans max-md:text-2xl text-3xl font-bold my-2 transition-colors duration-200'>Upload</p>
+                    <p className='cursor-pointer text-white text-center bg-purple-600 hover:text-purple-900 hover:bg-white font-DMSans max-md:text-2xl text-3xl font-bold my-2 transition-colors duration-200'>Connect Wallet</p>
+                    <p className='cursor-pointer text-white hover:text-purple-900 hover:bg-white font-DMSans max-md:text-xl text-2xl font-bold my-1 pl-10 transition-colors duration-200'>Marketplace</p>
+                    <p className='cursor-pointer text-white hover:text-purple-900 hover:bg-white font-DMSans max-md:text-xl text-2xl font-bold my-1 pl-10 transition-colors duration-200'>Resource</p>
+                    <p className='cursor-pointer text-white hover:text-purple-900 hover:bg-white font-DMSans max-md:text-xl text-2xl font-bold my-1 pl-10 transition-colors duration-200'>About</p>
+                </div>
+
+
             </div>
         </div>
     )
