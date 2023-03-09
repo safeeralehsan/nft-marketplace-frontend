@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { FaEthereum } from "react-icons/fa"
 import { featuredLiveAuctionNFT } from "../common/types/home"
+import LiveAuctionSpinner from '../../assets/images/home/live_auction.png'
 
 
 export default function HeroCarousel() {
@@ -10,24 +11,24 @@ export default function HeroCarousel() {
         {
             name: "Abstr Gradient NFT",
             user: "Arkhan17",
-            userImage: "./src/assets/images/users/arkhan17.png",
-            NFTImage: "./src/assets/images/live_auction/live_auction1.png",
+            userImage: "./images/users/arkhan17.png",
+            NFTImage: "./images/live_auction/live_auction1.png",
             CurrentBid: "0.30 ETH",
             theme: "light",
         },
         {
             name: "Bubble NFT",
             user: "Arkhan17",
-            userImage: "./src/assets/images/users/arkhan17.png",
-            NFTImage: "./src/assets/images/live_auction/live_auction2.png",
+            userImage: "./images/users/arkhan17.png",
+            NFTImage: "./images/live_auction/live_auction2.png",
             CurrentBid: "0.25 ETH",
             theme: "light",
         },
         {
             name: "Abstr Gradient NFT",
             user: "Arkhan17",
-            userImage: "./src/assets/images/users/arkhan17.png",
-            NFTImage: "./src/assets/images/live_auction/live_auction3.png",
+            userImage: "./images/users/arkhan17.png",
+            NFTImage: "./images/live_auction/live_auction3.png",
             CurrentBid: "0.40 ETH",
             theme: "dark",
         },
@@ -79,7 +80,7 @@ export default function HeroCarousel() {
                 </div>
                 <div className="absolute top-[50%] h-1/4 w-fit z-30 -translate-x-[50%]">
                     <img
-                        src="./src/assets/images/home/live_auction.png"
+                        src={LiveAuctionSpinner}
                         className="h-full aspect-square animate-spin-slow"
                     />
                 </div>

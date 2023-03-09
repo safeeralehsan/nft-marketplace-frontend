@@ -1,5 +1,4 @@
 import Navbar from "../common/navbar";
-import HeroCarousel from "./heroCarousel";
 import HeroSection from "./heroSection";
 
 
@@ -18,7 +17,7 @@ export default function Home() {
                     <div className="col-span-1 flex justify-center max-md:my-5">
                         <div className="grid grid-cols-5 gap-4">
                             <div className="col-span-1 flex justify-end">
-                                <img src="./src/assets/images/icons/card-tick.png" alt="card_tick" className="h-8" />
+                                <img src="./images/icons/card-tick.png" alt="card_tick" className="h-8" />
                             </div>
                             <div className="col-span-4">
                                 <p className="font-DMSans text-lg font-bold">Fast Transation</p>
@@ -29,7 +28,7 @@ export default function Home() {
                     <div className="col-span-1 flex justify-center max-md:my-5">
                         <div className="grid grid-cols-5 gap-4">
                             <div className="col-span-1 flex justify-end">
-                                <img src="./src/assets/images/icons/chart-square.png" alt="chart_square" className="h-8" />
+                                <img src="./images/icons/chart-square.png" alt="chart_square" className="h-8" />
                             </div>
                             <div className="col-span-4">
                                 <p className="font-DMSans text-lg font-bold ">Growth Transation</p>

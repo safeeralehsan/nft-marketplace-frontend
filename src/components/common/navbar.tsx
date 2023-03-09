@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CiSearch } from 'react-icons/ci'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 export default function Navbar() {
     const [openMenuDrawer, setOpenMenuDrawer] = useState(false);
     const [searchInput, setSearchInput] = useState('')
+
+    useEffect(() => {
+        if (openMenuDrawer) {
+            document.getElementsByTagName('body')[0].classList.add('fixed');
+        } else {
+            document.getElementsByTagName('body')[0].classList.remove('fixed');
+        }
+    }, [openMenuDrawer])
 
     return (
         <div className="relative h-28 border-b-slate-100 border-b-[1px] flex items-center justify-center">
@@ -38,7 +46,8 @@ export default function Navbar() {
                     <AiOutlineMenu className={`text-xl transition-all duration-500 ${openMenuDrawer ? 'text-white' : 'text-black'}`} />
                 </span>
             </div>
-            <div className={`xl:hidden absolute z-40 right-0 top-0 w-[75vw] md:w-[50vw] h-screen bg-purple-900 flex flex-col justify-center
+
+            <div className={`xl:hidden absolute z-40 right-0 top-0 w-[75vw] md:w-[50vw] h-screen bg-purple-900 flex flex-col justify-center overflow-hidden
                     transition-transform duration-500 ${openMenuDrawer ? '' : 'translate-x-[100%]'}`}
             >
                 <span className='mx-auto my-5 w-9/12 flex flex-row items-center justify-around border-2 px-3 py-2 rounded-full focus-within:border-purple-700 transition-colors duration-300'>
