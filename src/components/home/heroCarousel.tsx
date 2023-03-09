@@ -107,15 +107,15 @@ function generatefeaturedLiveAuctionCardJSXArray(featuredLiveAuctionNFT: feature
                         <div className="relative flex-grow">
                             <div className={`absolute py-2 px-5 bottom-0 h-16 w-full rounded-xl backdrop-blur-lg ${NFT.theme === "light" ? 'bg-white/30' : 'bg-gray-600/20'} grid grid-cols-3`}>
                                 <div className="h-full col-span-1 flex flex-col justify-around">
-                                    <p className="text-white font-DMSans text-xs tracking-tight">Current Bid</p>
+                                    <p className="text-white font-DMSans text-xs max-md:text-[0.5rem] tracking-tight">Current Bid</p>
                                     <span className="text-white font-DMSans tracking-tight flex items-center whitespace-nowrap">
-                                        <FaEthereum className="inline-block text-xl mr-2" />
-                                        {NFT.CurrentBid}
+                                        <FaEthereum className="inline-block text-xl mr-2 w-fit" />
+                                        <span className="inline-block max-lg:text-[0.7rem]">{NFT.CurrentBid}</span>
                                     </span>
                                 </div>
                                 <div className="h-full col-start-3 flex flex-col justify-around">
-                                    <p className="text-white font-DMSans text-xs tracking-tight">Ends In</p>
-                                    <span className="text-white font-DMSans tracking-tight flex items-center whitespace-nowrap">
+                                    <p className="text-white font-DMSans text-xs max-md:text-[0.5rem] tracking-tight">Ends In</p>
+                                    <span className="text-white font-DMSans max-lg:text-[0.7rem] tracking-tight flex items-center whitespace-nowrap">
                                         12h 42m 42s
                                     </span>
                                 </div>
