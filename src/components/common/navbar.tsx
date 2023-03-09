@@ -2,17 +2,13 @@ import { useState, useEffect } from 'react';
 import { CiSearch } from 'react-icons/ci'
 import { AiOutlineMenu } from 'react-icons/ai'
 
-export default function Navbar() {
-    const [openMenuDrawer, setOpenMenuDrawer] = useState(false);
-    const [searchInput, setSearchInput] = useState('')
+type Props = {
+    openMenuDrawer: boolean,
+    setOpenMenuDrawer: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-    useEffect(() => {
-        if (openMenuDrawer) {
-            document.getElementsByTagName('body')[0].classList.add('fixed');
-        } else {
-            document.getElementsByTagName('body')[0].classList.remove('fixed');
-        }
-    }, [openMenuDrawer])
+export default function Navbar({ openMenuDrawer, setOpenMenuDrawer }: Props) {
+    const [searchInput, setSearchInput] = useState('')
 
     return (
         <div className="relative h-28 border-b-slate-100 border-b-[1px] flex items-center justify-center">
