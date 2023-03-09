@@ -37,7 +37,7 @@ export default function HeroCarousel() {
 
     return (
         <>
-            <div className="relative md:h-[26rem] h-80 aspect-[10/11]">
+            <div className="relative lg:h-[26rem] h-80 max-sm:h-72 aspect-[10/11] max-md:mt-10">
                 <div
                     className={`absolute left-0 top-0 w-full h-full bg-amber-200 transition-transform ease-in duration-200 cursor-pointer rounded-3xl overflow-hidden  
                             ${liveNFT === 1 ?
