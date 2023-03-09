@@ -11,7 +11,7 @@ export default function Navbar({ openMenuDrawer, setOpenMenuDrawer }: Props) {
     const [searchInput, setSearchInput] = useState('')
 
     return (
-        <div className="relative h-28 border-b-slate-100 border-b-[1px] flex items-center justify-center">
+        <div className="h-28 border-b-slate-100 border-b-[1px] flex items-center justify-center">
             <div className="lg:max-w-[70%] max-w-[80%] h-full w-full grid md:grid-cols-12 grid-cols-5">
                 <span className="col-span-2 font-IntegralCF text-purple-900 text-2xl h-full flex items-center">NFTERS</span>
                 <span className="col-span-4 font-DMSans font-bold text-base h-full w-full hidden xl:flex items-center justify-around">
@@ -43,8 +43,13 @@ export default function Navbar({ openMenuDrawer, setOpenMenuDrawer }: Props) {
                 </span>
             </div>
 
-            <div className={`xl:hidden absolute z-40 right-0 top-0 w-[75vw] md:w-[50vw] h-screen bg-purple-900 flex flex-col justify-center overflow-hidden
-                    transition-transform duration-500 ${openMenuDrawer ? '' : 'translate-x-[100%]'}`}
+            <div
+                className={`h-screen w-screen absolute z-40 top-0 right-0 bg-transparent ${openMenuDrawer ? '' : 'hidden'}`}
+                onClick={() => setOpenMenuDrawer(false)}
+            />
+            {/* Drawer Menu */}
+            <div className={`xl:hidden right-0 top-0 z-[49] w-[75vw] md:w-[50vw] h-screen bg-purple-900 flex flex-col justify-center overflow-hidden
+                    transition-transform duration-500 ${openMenuDrawer ? 'fixed' : 'absolute translate-x-[100%]'}`}
             >
                 <span className='mx-auto my-5 w-9/12 flex flex-row items-center justify-around border-2 px-3 py-2 rounded-full focus-within:border-purple-700 transition-colors duration-300'>
                     <input
